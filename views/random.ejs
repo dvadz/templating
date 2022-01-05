@@ -8,5 +8,11 @@
   </head>
   <body>
     <h1>Your random number is: <%=num%></h1>
+    <%if(num%2===0){%>
+    <h2>It is even</h2>
+    <%}else {%>
+    <h2>It is odd</h2>
+    <%}%>
+    <h2>It is <%= num%2===0? 'even' : 'odd'%></h2>
   </body>
 </html>
