@@ -7,6 +7,19 @@
     <title>Subreddit</title>
   </head>
   <body>
-    <h1>Browsing the <%=subreddit%> subreddit!</h1>
+    <h1>Browsing the <%= name %> subreddit!</h1>
+    <h2><%= description %></h2>
+    <h2>Total subscribers: <%= subscribers %></h2>
+    <h2>Posts</h2>
+    <hr />
+    <% for(let post of posts){ %>
+    <article>
+      <p><%= post.title %></p>
+      <p>- <b> <%= post.author %></b></p>
+      <% if(post.img){ %> <% } %>
+      <img src=" <%= post.img  %> " alt="" />
+    </article>
+    <hr />
+    <% } %>
   </body>
 </html>
