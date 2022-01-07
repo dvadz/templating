@@ -6,6 +6,8 @@ const redditData = require("./data.json");
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views")); //allows access to templates regardless of the current working
 
+app.use(express.static(path.join(__dirname, "public")));
+
 app.get("/", (req, res) => {
   res.render("home.ejs");
 });
